@@ -1,0 +1,248 @@
+/* Custom CSS for NovaTech */
+
+/* Font Family */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.hero-image {
+    background: url('../img/about.jpg');
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.hero-contact {
+    background: url('../img/contact.jpg');
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navigation */
+.navbar-brand {
+    color: #333 !important;
+}
+
+.nav-link {
+    color: #555 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #007bff !important;
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Carousel customization */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* Footer links */
+footer a:hover {
+    color: #007bff !important;
+    transition: color 0.3s ease;
+}
+
+/* Timeline styles for about page */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    content: '';
+    background-color: #007bff;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:before,
+.timeline-item:after {
+    content: ' ';
+    display: table;
+}
+
+.timeline-item:after {
+    clear: both;
+}
+
+.timeline-panel {
+    position: relative;
+    width: 46%;
+    padding: 20px;
+    border: 1px solid #d4edda;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-panel {
+    float: left;
+    margin-right: 8%;
+}
+
+.timeline-item:nth-child(even) .timeline-panel {
+    float: right;
+    margin-left: 8%;
+}
+
+.timeline-badge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 100;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Partner logos */
+.partner-logo {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    opacity: 0.7;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Contact form styling */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Map placeholder */
+.map-placeholder {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border: 2px dashed #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 1.2rem;
+    min-height: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 20px;
+    }
+
+    .timeline-item .timeline-panel {
+        width: calc(100% - 60px);
+        float: none !important;
+        margin: 0 0 0 40px;
+    }
+
+    .timeline-badge {
+        left: 20px;
+        margin-left: -25px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Custom spacing utilities */
+.py-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.my-6 {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+}
